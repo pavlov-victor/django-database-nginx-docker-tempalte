@@ -3,7 +3,10 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework_swagger.views import get_swagger_view
 from default_post.views import post_view
+from django.contrib import admin
 
+admin.site.site_header = 'Мой стандартный набор джанго'
+admin.site.site_title = 'Стандартный стай'
 
 schema_view = get_swagger_view(
     title='Default Project'
