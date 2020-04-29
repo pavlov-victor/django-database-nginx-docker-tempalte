@@ -21,6 +21,7 @@ INSTALLED_APPS = [
     'rest_framework_swagger',
 
     'my_custom_user',
+    'default_post'
 ]
 
 MIDDLEWARE = [
@@ -38,7 +39,7 @@ ROOT_URLCONF = 'src.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'static/')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
