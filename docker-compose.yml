@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile
     image: src
     hostname: web
-    command: /bin/sh -c "cd /app/ && python manage.py migrate && python manage.py collectstatic --noinput && gunicorn src.wsgi:application --workers 3 --bind unix:/app/src.sock"
+    command: /bin/sh -c "cd /app/ && python manage.py makemigrations && python manage.py migrate && python manage.py collectstatic --noinput && gunicorn src.wsgi:application --workers 3 --bind unix:/app/src.sock"
     volumes:
       - ./src:/app
     restart: unless-stopped

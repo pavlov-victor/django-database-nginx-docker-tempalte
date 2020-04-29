@@ -2,6 +2,7 @@
 *.pem
 *.pyc
 src/static_root/
+src/src.sock
 *dev.py
 *.sqlite3
 ./venv
